@@ -10,24 +10,6 @@ let input = document.getElementsByTagName("input")
 let message_1 = "Please fill out all the input"
 
 
-const body = document.body
-const header = document.querySelector("header")
-let lastScroll = 0
-
-window.addEventListener("scroll", function(e) {
-    let nav = document.getElementById("nav")
-    let previousScroll = 0,
-    navClasses = nav.classList
-    let currentScroll = window.scrollY
-    var isDown = currentScroll>previousScroll
-if(isDown && !navClasses.contains('scrolled')){
-    navClasses.add('scrolled')
-}
-else if(!isDown){
-   navClasses.remove('scrolled')
-}
-previousScroll = currentScroll
-})
 
 function validate(){
     // console.log("clicked")
@@ -50,6 +32,7 @@ let foodText = foods.options[foods.selectedIndex].text
    }
     else if (chickno.length > 1){
         alert("please you cant order more 9 chickens ")
+        return false
     }
     else{
        alert(" your order was successful")

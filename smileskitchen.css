@@ -7,16 +7,50 @@
 html{
     scroll-behavior: smooth;
 }
- body{
-     background: url( food_pics/Screenshot_20220303-110803_1.png);
-     background-repeat: no-repeat;
-     background-position: center;
-     background-size: cover;
-     background-attachment: fixed;
-     width: 100%;
-     height: 100vh;
-     overflow-x: hidden;
- }
+.links{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    padding: 0 20%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    background: orange;
+}
+.links p{
+    /* display: block; */
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.links ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.links ul li{
+    list-style-type: none;
+}
+.links ul li a{
+    color: #ecc;
+    text-decoration: none;
+    text-align: center;
+}
+header .small-head{
+    display: none;
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+    color: #fff;
+    background: rgba(255, 166, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-transform: capitalize;
+    padding: 10px;
+    font-size: 20px;
+}
 main{
     position: relative;
 }
@@ -27,7 +61,7 @@ main{
     color: #fff;
     z-index: 25;
     position: fixed;
-    bottom: 0;
+    bottom: 40px;
     right: 0;
     margin: 10px;
     display: flex;
@@ -39,7 +73,6 @@ main{
     padding: 0 5%;
     margin: 0 auto;
     background: #fff;
-    /* overflow: hidden; */
 }
 .nav{
     display: flex;
@@ -80,7 +113,7 @@ main{
     justify-content: space-around;
     width: 100%;
     height: auto;
-    /* height: 80vh; */
+    align-items: center;
 }
 .home-text,.home-img{
     flex-basis: 50%;
@@ -95,7 +128,6 @@ main{
 .btns{
 position: absolute;
 bottom: 30px;
-/* list-style-type: none; */
 }
 .btns li {
     width: 15px;
@@ -168,9 +200,6 @@ bottom: 30px;
 }
 .home-img img{
     width: 100%;
-    /* border-radius: 50%; */
-    /* width: 700px; */
-    /* height: 600px; */
     height: 85vh;
     position: relative;
 }
@@ -183,6 +212,7 @@ bottom: 30px;
     display: flex;
     margin-top: 50px;
     flex-direction: row-reverse;
+    align-items: center;
 }
 .about h3{
     font-size: 30px;
@@ -224,7 +254,6 @@ bottom: 30px;
 }
 .food{
     background: #fff;
-    min-width: 300px;
     height: auto;
     padding-bottom: 30px;
     flex-basis: 45%;
@@ -324,11 +353,15 @@ bottom: 30px;
     width: 100%;
     height: auto;
     padding: 50px;
-    background: rgba(225, 225, 225, 0.4);
+    background: url( food_pics/Screenshot_20220303-110803_1.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
     text-align: center;
 }
 .order1{
-    width: 400px;
+    width: 60%;
     margin: 50px auto 0 auto;
     padding: 20px;
     background: rgba(180, 160, 160, 0.7);
@@ -383,10 +416,6 @@ select{
     font-size: 20px;
 }
 .rcont .fa{
-    /* text-align: center; */
-    /* position: absolute;
-    top: 20px;
-    left: 0; */
     font-size: 25px;
 }
 .sub{
@@ -398,7 +427,6 @@ select{
     margin: 0 auto;
 }
 .sub-main p{
-    /* padding: 0; */
     margin: 50px 30px 30px 0;
     font-size: 30px;
     color: orange;
@@ -445,10 +473,10 @@ select{
 
          /* media queries */
 
-@media (min-height:1870px){
-    .head{
-        font-size: 55px;
-    }
+@media (min-height:1740px){
+.head{
+    font-size: 55px;
+}
  .nav ul li a{
      font-size: 50px;
  }
@@ -492,7 +520,6 @@ select{
  }
  .foods h2{
     font-size: 90px;
-    /* margin-top: 70px; */
  }
  .foods p{
      font-size: 60px;
@@ -531,12 +558,12 @@ select{
      font-size: 80px;
  }
  .order1{
-     width: 50vh;
+     width: 70vh;
      padding: 50px;
  }
  .order1 p{
      font-size: 60px;
-     padding: 0;
+     padding: 0 0 30px 0;
  }
  .order1 input, select{
      height: 80px;
@@ -554,15 +581,15 @@ select{
      font-size: 70px;
  }
  .sub input{
-     width: 40vh;
+     width: 40%;
      height: 100px;
      font-size: 50px;
  }
  #subsub{
-     width: 20vh;
+     width: 20%;
  }
  .sub-main{
-     width: 70vh;
+     width: 70%;
  }
  .footer h2{
      font-size: 100px;
@@ -579,9 +606,79 @@ select{
  }
 }
 
-@media (max-width:700px){
+@media (min-height:1000px){
+    .home{
+        align-items: center;
+    }
+.home-img img{
+    height: auto;
+}
+}
+
+@media (min-width:1430px){
+    .head{
+        font-size: 55px;
+    }
+    .nav ul li a{
+        font-size: 30px;
+    }
+    .home-text{
+        padding-left: 70px;
+    }
+    .home-text p{
+        font-size: 40px;
+        margin-bottom: 70px;
+    }
+    .home-text h2{
+        font-size: 60px;
+    }
+    .home-text{
+        height: 100%;
+    }
+    .btn{
+        font-size: 40px;
+        padding: 20px 40px;
+        border-radius: 50px;
+        margin: 100px auto 0 auto;
+    }
+    .about-text p{
+        font-size: 40px;
+    }
+}
+
+@media (min-width:2500px) {
+    .head{
+        font-size: 55px;
+    }
+     .nav ul li a{
+         font-size: 50px;
+     }
+    .home-img img{
+        height: 70vh;
+    }
+   
+    .home-text{
+        padding-left: 100px;
+    }
+    .home-text p{
+        font-size: 60px;
+        margin-bottom: 100px;
+    }
+    .home-text h2{
+        font-size: 100px;
+    }
+    .btn{
+        font-size: 70px;
+        padding: 40px 60px;
+        border-radius: 70px;
+        margin: 100px auto 0 auto;
+    }
+}
+
+@media (max-width:600px){
     body{
         width: 100vw;
+        overflow-x: hidden;
     }
     .testimonies{
         flex-direction: column;
@@ -589,11 +686,102 @@ select{
     .test1{
         flex-basis: 100%;
     }
-    .container{
-        width: 100vw;
-    }
     .find-food{
         display: flex;
         flex-direction: column;
+    }
+    .food{
+        flex-basis: 100%;
+    }
+    .food img{
+        height: 35vh;
+    }
+    .container{
+        padding: 0 8%;
+    }
+    .order{
+        padding: 30px;
+    }
+    .order1{
+        width: 100%;
+    }
+    .sub{
+        padding: 20px;
+    }
+    .sub-main{
+        width: 90%;
+    }
+    .sub-main p{
+        font-size: 20px;
+    }
+    .sub-main input{
+        width: 100%;
+    }
+    .home{
+        flex-direction: column;
+        margin-top: 10%;
+    }
+    .home-img{
+        margin-top: 30px;
+    }
+    .home-text p{
+        font-size: 18px;
+        margin: 20px 0;
+    }
+    .home-text .low-p{
+        margin-bottom: 40px;
+    }
+    .home-text h2{
+        font-size: 20px;
+    }
+    .about1{
+        flex-direction: column-reverse;
+    }
+    .about-img{
+        margin-top: 40px;
+    }
+    .about-text h2{
+        font-size: 25px;
+    }
+    .about-text p{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    .about-text{
+        padding:  20px;
+    }
+    .testimonial{
+        padding: 0;
+    }
+    .test1{
+        margin-bottom: 50px;
+        flex-basis: 100%;
+    }
+    .test1 p{
+        font-size: 14px;
+    }
+    .footer{
+        padding-bottom: 50px;
+    }
+    .footer h2{
+        font-size: 20px;
+    }
+    .foot{
+        padding: 10px;
+    }
+    .foot p{
+        font-size: 15px;
+    }
+    .foot ul li a{
+        font-size: 12px;
+    }
+    .nav{
+        display: none;
+    }
+    header .small-head{
+        display: block;
+    }
+    .links{
+        display: block;
     }
 }
