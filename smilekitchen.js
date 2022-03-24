@@ -70,3 +70,12 @@ function animation(){
         b.classList.remove("active")
     }
 }
+
+var options = {
+    strings: ['Cook', 'Dish', 'Satisfy'],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop: true
+  };
+  
+  var typed = new Typed('.element', options);

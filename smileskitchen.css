@@ -125,6 +125,14 @@ main{
     position: relative;
     overflow: hidden;
 }
+.home-img h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: orange;
+    font-size: 30px;
+}
 .btns{
 position: absolute;
 bottom: 30px;
@@ -679,6 +687,7 @@ select{
     body{
         width: 100vw;
         overflow-x: hidden;
+        background: #ccc;
     }
     .testimonies{
         flex-direction: column;
