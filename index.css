@@ -96,7 +96,7 @@ main{
 .navlinks ul li a{
     text-decoration: none;
     font-size: 20px;
-    color: orange;
+    color: #3a3a3a;
     padding: 20px;
     transition: all .5s;
 }
@@ -130,8 +130,8 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: orange;
-    font-size: 30px;
+    color: #fff;
+    font-size: 50px;
 }
 .btns{
 position: absolute;
@@ -164,7 +164,7 @@ bottom: 30px;
     background: orange;
 }
 .home-text p{
-    color: orange;
+    color: #3a3a3a;
     font-size: 1.2rem;
     margin: 40px 0;
     word-spacing: 5px;
@@ -213,7 +213,7 @@ bottom: 30px;
 }
 .about{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 200px;
     color: orange;
 }
 .about1{
@@ -226,7 +226,7 @@ bottom: 30px;
     font-size: 30px;
 }
 .about p{
-    font-size: 25px;
+    font-size: 35px;
 }
 .about-text{
     flex-basis: 50%;
@@ -237,6 +237,7 @@ bottom: 30px;
 .about-text h2{
     font-size: 40px;
     text-align: left;
+    text-transform: capitalize;
 }
 .about-text p{
     font-size: 20px;
@@ -259,6 +260,12 @@ bottom: 30px;
 .food-text{
     text-align: center;
     color: orange;
+}
+.food-text h2 {
+    font-size: 30px;
+}
+.food-text p {
+    color: #3a3a3a;
 }
 .food{
     background: #fff;
